@@ -1,0 +1,12 @@
+generateData.py
+  output: all_examples.json
+
+make_balanced_subset.py
+   INPUT_FILE = "all_examples.json"     # your full JSON file
+   OUTPUT_FILE = "balanced_100.json"    # output subset file
+
+splitFiles.py
+   input balanced_100.json
+   output
+     f1.json through f10.json
+

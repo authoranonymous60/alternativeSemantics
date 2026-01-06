@@ -1,0 +1,219 @@
+=== Log for f2 (backend=openai, model=gpt-audio, run=20260105_095313, fold=1) ===
+
+--- Attempt 1 for f2_cv1 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+IMPORTANT:
+- The audio for ALL examples is ALREADY INCLUDED with this message.
+- You must NOT ask for audio or wait for additional input.
+- You must infer S1 and S2 ONLY from the provided audio.
+
+
+
+---------------------------------------------------------------
+FOCUS GUIDANCE
+---------------------------------------------------------------
+The classification depends on the focused element in S1, because of
+the presence of 'only', in the following way: 'Sam only gave TOM
+oranges' entails that Sam did not give anyone else oranges. On the
+other hand, 'Sam only gave Tom ORANGES' entails that Sam didn't give
+anything else to Tom.
+
+You must follow this logic in determining the inference. You must
+also refer to this logic in producing the explanation.
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+The following numbered examples ALREADY INCLUDE a correct answer: 2, 3
+
+IMPORTANT:
+- These examples are NOT demonstrations.
+- They are full task items, just like the later ones.
+- The presence of an answer does NOT mean you should skip them.
+- You MUST produce a complete output block for EVERY numbered example (0–9).
+
+For each numbered example (0–9), you must:
+- Transcribe S1 and S2 from the audio
+- Mark the focused element in S1 using UPPERCASE
+- Provide your own classification (A, B, or C)
+- Provide an explanation
+
+2
+S1: Sam only gave SUE oranges.
+S2: Sam also gave Sue apples.
+B
+Because...
+
+3
+S1: Sam only gave SUE bananas.
+S2: Sam didn't give Rob bananas.
+A
+Because...
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0  
+S1: Sam only gave ROB bananas.  
+S2: Sam didn't give Tom bananas.  
+A  
+Because in S1, the prosodic focus is on "ROB," meaning Sam gave bananas exclusively to Rob and not to anyone else. S2 is stating that Tom did not receive bananas. This is entailed by S1, since if only Rob got bananas, it follows that Tom did not.
+
+1  
+S1: Sam only gave TOM grapes.  
+S2: Sam didn't give Tom oranges.  
+A  
+Because in S1, the prosodic focus is on "TOM," meaning Sam gave grapes exclusively to Tom and no one else. S2 says that Tom didn't get oranges, which is consistent with S1's focus on grapes being the only thing Tom received. There is no contradiction.
+
+2  
+S1: Sam only gave SUE oranges.  
+S2: Sam also gave Sue apples.  
+C  
+Because in S1, the prosodic focus is on "oranges," meaning Sue received only oranges from Sam and nothing else. S2 contradicts that by stating that Sue also received apples. This directly contradicts the exclusivity implied in S1.
+
+3  
+S1: Sam only gave SUE bananas.  
+S2: Sam didn't give Rob bananas.  
+A  
+Because in S1, the prosodic focus is on "SUE," meaning only Sue received bananas and no one else did. S2 says that Rob didn’t receive bananas, which matches the entailment from S1, since only Sue was given bananas.
+
+4  
+S1: Sam only gave TOM oranges.  
+S2: Sam didn't give Tom bananas.  
+A  
+Because in S1, the prosodic focus is on "oranges," meaning the only thing Sam gave Tom were oranges and nothing else. S2 says that Tom didn’t receive bananas, which is entailed by the exclusivity implied by S1.
+
+5  
+S1: Sam only gave SUE apples.  
+S2: Sam didn't give Sue oranges.  
+A  
+Because in S1, the prosodic focus is on "apples," meaning the only thing Sam gave Sue were apples. S2 states that Sue didn’t get oranges, which fits perfectly with this. No contradictions arise.
+
+6  
+S1: Sam only gave SUE grapes.  
+S2: Sam didn't give Sue apples.  
+A  
+Because in S1, the prosodic focus is on "grapes," meaning Sue only got grapes and nothing else. S2 states that Sue didn’t get apples, which logically follows from S1’s exclusivity.
+
+7  
+S1: Sam only gave ELLEN oranges.  
+S2: Sam also gave Ellen bananas.  
+C  
+Because in S1, the prosodic focus is on "oranges," meaning Ellen received only oranges from Sam. S2 says Sam also gave Ellen bananas, which contradicts the exclusivity premise in S1.
+
+8  
+S1: Sam only gave MARY grapes.  
+S2: Sam didn't give Mary apples.  
+A  
+Because in S1, the prosodic focus is on "grapes," meaning Mary only received grapes from Sam. S2 states that Mary didn’t get apples, which fits the entailment suggested by S1’s exclusivity.
+
+9  
+S1: Sam only gave BILL oranges.  
+S2: Sam also gave Mary oranges.  
+B  
+Because in S1, the prosodic focus is on "BILL," meaning the only person who received oranges from Sam was Bill, and no one else. S2 says Mary also received oranges, which is independent of the restriction imposed on Bill. This doesn’t directly contradict or entail S1, but rather introduces an independent claim.
+
+--- End of Raw Model Output ---
+
+✓ Output coverage OK [attempt 1] for f2_cv1: 10 parsed blocks; 10/10 indices in-range; all 8 required test indices present.
+
+✓ Finished processing input/f2_cv1
+  Results saved to: results/f2_audio_openai_gpt-audio_FS2_focusHint_CV_cv1_20260105_095313.csv
+  Log saved to:     results/f2_audio_openai_gpt-audio_FS2_focusHint_CV_cv1_20260105_095313.log
+

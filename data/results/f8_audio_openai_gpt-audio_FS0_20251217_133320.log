@@ -1,0 +1,189 @@
+=== Log for f8 (backend=openai, model=gpt-audio, run=20251217_133320) ===
+
+--- Attempt 1 for f8 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+---------------------------------------------------------------
+FOCUS GUIDANCE
+---------------------------------------------------------------
+The classification depends on the focused element in S1, because of
+the presence of 'only', in the following way: 'Sam only gave TOM
+oranges' entails that Sam did not give anyone else oranges. On the
+other hand, 'Sam only gave Tom ORANGES' entails that Sam didn't give
+anything else to Tom.
+
+You must follow this logic in determining the inference.  You must
+also refer to this logic in producing the explanation.
+        
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0  
+S1: Sam ONLY gave ELLEN bananas.  
+S2: Sam also gave ROB bananas.  
+C  
+Because focusing on "ELLEN" in S1 means Sam did not give bananas to anyone else. S2 says Sam gave bananas to Rob, which contradicts this.  
+
+1  
+S1: Sam ONLY gave ROB grapes.  
+S2: Sam also gave ROB oranges.  
+C  
+Because focusing on "grapes" in S1 means Sam did not give Rob anything other than grapes. S2 says Sam gave Rob oranges, which contradicts this.  
+
+2  
+S1: Sam ONLY gave TOM apples.  
+S2: Sam also gave BILL apples.  
+C  
+Because focusing on "TOM" in S1 means Sam did not give apples to anyone else. S2 says Sam gave apples to Bill, which contradicts this.  
+
+3  
+S1: Sam ONLY gave MARY apples.  
+S2: Sam also gave MARY bananas.  
+C  
+Because focusing on "apples" in S1 means Sam did not give Mary anything other than apples. S2 says Sam gave Mary bananas, which contradicts this.  
+
+4  
+S1: Sam ONLY gave ELLEN oranges.  
+S2: Sam also gave SUE oranges.  
+C  
+Because focusing on "ELLEN" in S1 means Sam did not give oranges to anyone else. S2 says Sam gave oranges to Sue, which contradicts this.  
+
+5  
+S1: Sam ONLY gave ROB oranges.  
+S2: Sam didn’t give ROB apples.  
+A  
+Because focusing on "oranges" in S1 means Sam did not give Rob anything other than oranges. S2 states that Sam didn’t give Rob apples, which is consistent with S1.  
+
+6  
+S1: Sam ONLY gave BILL bananas.  
+S2: Sam didn’t give ELLEN bananas.  
+A  
+Because focusing on "BILL" in S1 means Sam did not give bananas to anyone else. S2 states that Sam didn’t give Ellen bananas, which is consistent with S1.  
+
+7  
+S1: Sam ONLY gave ROB bananas.  
+S2: Sam also gave SUE bananas.  
+C  
+Because focusing on "ROB" in S1 means Sam did not give bananas to anyone else. S2 says Sam gave bananas to Sue, which contradicts this.  
+
+8  
+S1: Sam ONLY gave BILL bananas.  
+S2: Sam didn’t give MARY bananas.  
+A  
+Because focusing on "BILL" in S1 means Sam did not give bananas to anyone else. S2 states that Sam didn’t give Mary bananas, which is consistent with S1.  
+
+9  
+S1: Sam ONLY gave ELLEN grapes.  
+S2: Sam didn’t give ROB grapes.  
+A  
+Because focusing on "ELLEN" in S1 means Sam did not give grapes to anyone else. S2 states that Sam didn’t give Rob grapes, which is consistent with S1.
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 1] for f8: 10/10 examples.
+
+✓ Finished processing input/f8
+  Results saved to: results/f8_audio_openai_gpt-audio_FS0_20251217_133320.csv
+  Log saved to:     results/f8_audio_openai_gpt-audio_FS0_20251217_133320.log
+

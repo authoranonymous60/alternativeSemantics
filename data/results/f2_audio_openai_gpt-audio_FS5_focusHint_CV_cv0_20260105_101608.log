@@ -1,0 +1,237 @@
+=== Log for f2 (backend=openai, model=gpt-audio, run=20260105_101608, fold=0) ===
+
+--- Attempt 1 for f2_cv0 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+IMPORTANT:
+- The audio for ALL examples is ALREADY INCLUDED with this message.
+- You must NOT ask for audio or wait for additional input.
+- You must infer S1 and S2 ONLY from the provided audio.
+
+
+
+---------------------------------------------------------------
+FOCUS GUIDANCE
+---------------------------------------------------------------
+The classification depends on the focused element in S1, because of
+the presence of 'only', in the following way: 'Sam only gave TOM
+oranges' entails that Sam did not give anyone else oranges. On the
+other hand, 'Sam only gave Tom ORANGES' entails that Sam didn't give
+anything else to Tom.
+
+You must follow this logic in determining the inference. You must
+also refer to this logic in producing the explanation.
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+The following numbered examples ALREADY INCLUDE a correct answer: 0, 1, 2, 3, 4
+
+IMPORTANT:
+- These examples are NOT demonstrations.
+- They are full task items, just like the later ones.
+- The presence of an answer does NOT mean you should skip them.
+- You MUST produce a complete output block for EVERY numbered example (0–9).
+
+For each numbered example (0–9), you must:
+- Transcribe S1 and S2 from the audio
+- Mark the focused element in S1 using UPPERCASE
+- Provide your own classification (A, B, or C)
+- Provide an explanation
+
+0
+S1: Sam only gave ROB bananas.
+S2: Sam didn't give Tom bananas.
+A
+Because...
+
+1
+S1: Sam only gave TOM grapes.
+S2: Sam didn't give Tom oranges.
+B
+Because...
+
+2
+S1: Sam only gave SUE oranges.
+S2: Sam also gave Sue apples.
+B
+Because...
+
+3
+S1: Sam only gave SUE bananas.
+S2: Sam didn't give Rob bananas.
+A
+Because...
+
+4
+S1: Sam only gave Tom ORANGES.
+S2: Sam didn't give Tom bananas.
+A
+Because...
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0  
+S1: Sam only gave ROB bananas.  
+S2: Sam didn't give Tom bananas.  
+A  
+Because the prosodic focus is on "ROB" in S1, it means that Sam gave bananas only to Rob and not to anyone else. Therefore, S2, which says Sam didn’t give Tom bananas, is entailed. The focus on "ROB" excludes all others from receiving bananas, including Tom.
+
+1  
+S1: Sam only gave TOM grapes.  
+S2: Sam didn't give Tom oranges.  
+B  
+Because the prosodic focus is on "TOM" in S1, it means Sam gave grapes only to Tom and not to anyone else. This does not say anything about what was given to Tom besides grapes. In other words, S1 restricts who got grapes, but it does not restrict what Tom received. Thus, whether Sam gave Tom oranges or not is independent of S1.
+
+2  
+S1: Sam only gave SUE oranges.  
+S2: Sam also gave Sue apples.  
+C  
+Because the prosodic focus is on "SUE" in S1, this means Sam gave oranges only to Sue and not to anyone else. It does not restrict the types of items given to Sue, only who received oranges. S2 states that Sue got additional items (apples), which contradicts the implied meaning if the focus had been on "ORANGES". Thus, with the focus on "SUE", there’s no restriction that Sue can’t get anything else besides oranges. Therefore, S2 contradicts S1.
+
+3  
+S1: Sam only gave SUE bananas.  
+S2: Sam didn't give Rob bananas.  
+A  
+Because the prosodic focus is on "SUE" in S1, it means Sam gave bananas only to Sue and no one else. This directly entails that Sam did not give bananas to Rob or anyone else. Therefore, S2 is entailed by S1.
+
+4  
+S1: Sam only gave Tom ORANGES.  
+S2: Sam didn't give Tom bananas.  
+A  
+Because the prosodic focus is on "ORANGES" in S1, it means Sam gave Tom only oranges and nothing else. Therefore, S2, which says Sam didn’t give Tom bananas, is entailed. The focus on "ORANGES" excludes other items from being given to Tom.
+
+5  
+S1: Sam only gave SUE APPLES.  
+S2: Sam didn't give Sue oranges.  
+A  
+Because the prosodic focus is on "APPLES" in S1, it means Sam gave Sue only apples and nothing else. This directly entails that Sam did not give Sue oranges. Hence, S2 follows from S1.
+
+6  
+S1: Sam only gave SUE grapes.  
+S2: Sam didn't give Sue apples.  
+A  
+Because the prosodic focus is on "grapes" in S1, it means Sam gave Sue only grapes and nothing else. That entails that Sue didn't receive apples or anything besides grapes. Therefore, S2 is entailed by S1.
+
+7  
+S1: Sam only gave ELLEN oranges.  
+S2: Sam also gave Ellen bananas.  
+C  
+Because the prosodic focus is on "ELLEN" in S1, it means Sam gave oranges only to Ellen and no one else. It does not restrict what Sam might have given to Ellen. However, S2 says Sam gave Ellen bananas as well, which contradicts the scenario where the focus had been on "ORANGES". Therefore, with focus on "ELLEN", S2 contradicts S1.
+
+8  
+S1: Sam only gave MARY grapes.  
+S2: Sam didn't give Mary apples.  
+A  
+Because the prosodic focus is on "grapes" in S1, it means Sam gave Mary only grapes and nothing else. This entails that he did not give Mary apples. Therefore, S2 is entailed by S1.
+
+9  
+S1: Sam only gave BILL oranges.  
+S2: Sam also gave Mary oranges.  
+B  
+Because the prosodic focus is on "BILL" in S1, it means Sam gave oranges only to Bill and no one else. S2 involves Mary receiving oranges. This directly contradicts S1. Therefore, the relationship is a contradiction.
+
+--- End of Raw Model Output ---
+
+✓ Output coverage OK [attempt 1] for f2_cv0: 10 parsed blocks; 10/10 indices in-range; all 5 required test indices present.
+
+✓ Finished processing input/f2_cv0
+  Results saved to: results/f2_audio_openai_gpt-audio_FS5_focusHint_CV_cv0_20260105_101608.csv
+  Log saved to:     results/f2_audio_openai_gpt-audio_FS5_focusHint_CV_cv0_20260105_101608.log
+

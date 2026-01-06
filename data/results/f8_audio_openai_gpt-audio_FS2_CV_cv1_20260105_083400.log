@@ -1,0 +1,207 @@
+=== Log for f8 (backend=openai, model=gpt-audio, run=20260105_083400, fold=1) ===
+
+--- Attempt 1 for f8_cv1 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+IMPORTANT:
+- The audio for ALL examples is ALREADY INCLUDED with this message.
+- You must NOT ask for audio or wait for additional input.
+- You must infer S1 and S2 ONLY from the provided audio.
+
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+The following numbered examples ALREADY INCLUDE a correct answer: 2, 3
+
+IMPORTANT:
+- These examples are NOT demonstrations.
+- They are full task items, just like the later ones.
+- The presence of an answer does NOT mean you should skip them.
+- You MUST produce a complete output block for EVERY numbered example (0–9).
+
+For each numbered example (0–9), you must:
+- Transcribe S1 and S2 from the audio
+- Mark the focused element in S1 using UPPERCASE
+- Provide your own classification (A, B, or C)
+- Provide an explanation
+
+2
+S1: Sam only gave TOM apples.
+S2: Sam also gave Bill apples.
+C
+Because...
+
+3
+S1: Sam only gave Mary APPLES.
+S2: Sam also gave Mary bananas.
+C
+Because...
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0  
+S1: Sam only gave ELLEN bananas.  
+S2: Sam also gave ROB bananas.  
+C  
+Because the word "only" with prosodic focus on "ELLEN" means that Sam didn’t give bananas to anyone else. S2 contradicts this by stating that Sam also gave bananas to Rob.  
+
+1  
+S1: Sam only gave ROB GRAPES.  
+S2: Sam also gave ROB ORANGES.  
+C  
+Because the focus is on "ROB GRAPES," meaning he only gave Rob grapes and nothing else to Rob. S2 contradicts this by saying Sam also gave Rob oranges.  
+
+2  
+S1: Sam only gave TOM apples.  
+S2: Sam also gave BILL apples.  
+C  
+Because the focus on "TOM" means Sam gave apples only to Tom and not to anyone else. S2 contradicts this by saying Sam gave apples to Bill as well.  
+
+3  
+S1: Sam only gave MARY APPLES.  
+S2: Sam also gave MARY bananas.  
+C  
+Because the focus on "MARY APPLES" means that Mary only got apples and nothing else. S2 contradicts this by stating that Mary also got bananas.  
+
+4  
+S1: Sam only gave ELLEN ORANGES.  
+S2: Sam also gave SUE oranges.  
+C  
+Because "ELLEN ORANGES" with focus means Ellen was the only recipient of oranges. S2 contradicts this by saying Sue also received oranges.  
+
+5  
+S1: Sam only gave ROB ORANGES.  
+S2: Sam didn’t give ROB apples.  
+A  
+Because if Sam only gave Rob oranges, it is entailed that Sam did not give Rob any apples or anything else. S2 aligns with that, confirming no apples were given.  
+
+6  
+S1: Sam only gave BILL BANANAS.  
+S2: Sam didn’t give ELLEN bananas.  
+B  
+Because the statement about Bill receiving only bananas doesn’t entail any information about Ellen. S2 is independent since Ellen isn’t mentioned in S1 at all.  
+
+7  
+S1: Sam only gave ROB BANANAS.  
+S2: Sam also gave SUE bananas.  
+C  
+Because with the prosodic focus on "ROB BANANAS," the meaning is that Rob was the sole recipient of bananas. S2 contradicts this by stating Sue also got bananas.  
+
+8  
+S1: Sam only gave BILL BANANAS.  
+S2: Sam didn’t give MARY bananas.  
+A  
+Because "BILL BANANAS" means only Bill received bananas. It logically follows that no one else, including Mary, received bananas. So S2 is entailed.  
+
+9  
+S1: Sam only gave ELLEN GRAPES.  
+S2: Sam didn’t give ROB grapes.  
+A  
+Because the focused phrase "ELLEN GRAPES" means only Ellen received grapes. It follows that Rob didn’t receive grapes, making S2 an entailment.
+
+--- End of Raw Model Output ---
+
+✓ Output coverage OK [attempt 1] for f8_cv1: 10 parsed blocks; 10/10 indices in-range; all 8 required test indices present.
+
+✓ Finished processing input/f8_cv1
+  Results saved to: results/f8_audio_openai_gpt-audio_FS2_CV_cv1_20260105_083400.csv
+  Log saved to:     results/f8_audio_openai_gpt-audio_FS2_CV_cv1_20260105_083400.log
+

@@ -1,0 +1,189 @@
+=== Log for f1 (backend=openai, model=gpt-audio, run=20251217_133320) ===
+
+--- Attempt 1 for f1 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+---------------------------------------------------------------
+FOCUS GUIDANCE
+---------------------------------------------------------------
+The classification depends on the focused element in S1, because of
+the presence of 'only', in the following way: 'Sam only gave TOM
+oranges' entails that Sam did not give anyone else oranges. On the
+other hand, 'Sam only gave Tom ORANGES' entails that Sam didn't give
+anything else to Tom.
+
+You must follow this logic in determining the inference.  You must
+also refer to this logic in producing the explanation.
+        
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0  
+S1: Sam only gave BILL grapes.  
+S2: Sam also gave Sue grapes.  
+C  
+Because the focus in S1 is on "BILL", meaning Sam didn't give grapes to anyone else. If S2 claims Sam also gave Sue grapes, that contradicts the exclusive claim that only Bill got grapes.
+
+1  
+S1: Sam only gave Sue ORANGES.  
+S2: Sam also gave Rob oranges.  
+C  
+Because the focus in S1 is on "ORANGES", meaning Sue got only oranges and not other fruits. But this doesn’t exclude others from getting oranges. S2 says Rob also got oranges, which contradicts the typical inference from the exclusive claim that usually no one else got oranges. So, the contradiction arises from the implication that "only Sue" should exclude others receiving the same item.
+
+2  
+S1: Sam only gave SUE grapes.  
+S2: Sam didn’t give Ellen grapes.  
+A  
+Because the focus in S1 is on "SUE", meaning Sam gave grapes to Sue and no one else. S2 says Sam didn’t give Ellen grapes, which aligns perfectly with the exclusivity claim.
+
+3  
+S1: Sam only gave Tom APPLES.  
+S2: Sam didn’t give Tom grapes.  
+A  
+Because the focus in S1 is on "APPLES", meaning Tom got only apples and not any other fruit. S2 states that Sam didn’t give Tom grapes, which is consistent with that exclusive claim. 
+
+4  
+S1: Sam only gave ROB oranges.  
+S2: Sam also gave Rob apples.  
+C  
+Because the focus in S1 is on "ROB", meaning Sam didn’t give oranges to anyone else. But S2 talks about giving Rob apples. This contradicts the inference that Rob exclusively got oranges and no other items.
+
+5  
+S1: Sam only gave SUE grapes.  
+S2: Sam didn’t give Tom grapes.  
+A  
+Because the focus in S1 is on "SUE", meaning only Sue got grapes. S2 says Tom didn’t get grapes, which perfectly supports that exclusive claim.
+
+6  
+S1: Sam only gave ELLEN bananas.  
+S2: Sam also gave Mary bananas.  
+C  
+Because the focus in S1 is on "ELLEN", meaning no one else got bananas. S2 says Mary also got bananas, which contradicts S1’s exclusivity.
+
+7  
+S1: Sam only gave ROB bananas.  
+S2: Sam didn’t give Rob oranges.  
+A  
+Because the focus in S1 is on "ROB", meaning Sam gave bananas only to Rob and not to others. S2 says Sam didn’t give Rob oranges, which aligns with S1’s implication that Rob got bananas and no other fruits.
+
+8  
+S1: Sam only gave MARY bananas.  
+S2: Sam also gave Mary apples.  
+C  
+Because the focus in S1 is on "MARY", meaning no one else got bananas. The fact that S2 says Mary got apples doesn’t directly contradict this. However, the intended logic of exclusivity focuses on a single beneficiary. The statement implies that Mary got only bananas (and no other fruit), so S2 contradicts that by saying Mary got apples too.
+
+9  
+S1: Sam only gave SUE oranges.  
+S2: Sam didn’t give Rob oranges.  
+A  
+Because the focus in S1 is on "SUE", meaning only Sue got oranges. S2 says Rob didn’t get oranges, which supports that exclusive claim.
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 1] for f1: 10/10 examples.
+
+✓ Finished processing input/f1
+  Results saved to: results/f1_audio_openai_gpt-audio_FS0_20251217_133320.csv
+  Log saved to:     results/f1_audio_openai_gpt-audio_FS0_20251217_133320.log
+

@@ -1,0 +1,902 @@
+[
+    {
+        "S1": "Sam only gave BILL grapes.",
+        "S2": "Sam also gave Sue grapes.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 691
+    },
+    {
+        "S1": "Sam only gave SUE oranges.",
+        "S2": "Sam also gave Rob oranges.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 97
+    },
+    {
+        "S1": "Sam only gave SUE grapes.",
+        "S2": "Sam didn't give Ellen grapes.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 48
+    },
+    {
+        "S1": "Sam only gave TOM apples.",
+        "S2": "Sam didn't give Tom grapes.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 412
+    },
+    {
+        "S1": "Sam only gave Rob ORANGES.",
+        "S2": "Sam also gave Rob apples.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 519
+    },
+    {
+        "S1": "Sam only gave SUE grapes.",
+        "S2": "Sam didn't give Tom grapes.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 92
+    },
+    {
+        "S1": "Sam only gave Ellen BANANAS.",
+        "S2": "Sam also gave Mary bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 203
+    },
+    {
+        "S1": "Sam only gave ROB bananas.",
+        "S2": "Sam didn't give Rob oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 545
+    },
+    {
+        "S1": "Sam only gave Mary BANANAS.",
+        "S2": "Sam also gave Mary apples.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 299
+    },
+    {
+        "S1": "Sam only gave Sue ORANGES.",
+        "S2": "Sam didn't give Rob oranges.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 98
+    },
+    {
+        "S1": "Sam only gave ROB bananas.",
+        "S2": "Sam didn't give Tom bananas.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 616
+    },
+    {
+        "S1": "Sam only gave TOM grapes.",
+        "S2": "Sam didn't give Tom oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 433
+    },
+    {
+        "S1": "Sam only gave SUE oranges.",
+        "S2": "Sam also gave Sue apples.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 2
+    },
+    {
+        "S1": "Sam only gave SUE bananas.",
+        "S2": "Sam didn't give Rob bananas.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 104
+    },
+    {
+        "S1": "Sam only gave Tom ORANGES.",
+        "S2": "Sam didn't give Tom bananas.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 394
+    },
+    {
+        "S1": "Sam only gave SUE apples.",
+        "S2": "Sam didn't give Sue oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 17
+    },
+    {
+        "S1": "Sam only gave Sue GRAPES.",
+        "S2": "Sam didn't give Sue apples.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 58
+    },
+    {
+        "S1": "Sam only gave ELLEN oranges.",
+        "S2": "Sam also gave Ellen bananas.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 137
+    },
+    {
+        "S1": "Sam only gave MARY grapes.",
+        "S2": "Sam didn't give Mary apples.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 312
+    },
+    {
+        "S1": "Sam only gave BILL oranges.",
+        "S2": "Sam also gave Mary oranges.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 721
+    },
+    {
+        "S1": "Sam only gave ELLEN grapes.",
+        "S2": "Sam didn't give Tom grapes.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 220
+    },
+    {
+        "S1": "Sam only gave Ellen APPLES.",
+        "S2": "Sam didn't give Ellen oranges.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 148
+    },
+    {
+        "S1": "Sam only gave Rob GRAPES.",
+        "S2": "Sam also gave Ellen grapes.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 591
+    },
+    {
+        "S1": "Sam only gave Rob APPLES.",
+        "S2": "Sam also gave Ellen apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 583
+    },
+    {
+        "S1": "Sam only gave Ellen APPLES.",
+        "S2": "Sam didn't give Bill apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 246
+    },
+    {
+        "S1": "Sam only gave Rob APPLES.",
+        "S2": "Sam didn't give Sue apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 533
+    },
+    {
+        "S1": "Sam only gave ROB oranges.",
+        "S2": "Sam also gave Rob apples.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 514
+    },
+    {
+        "S1": "Sam only gave ROB apples.",
+        "S2": "Sam also gave Rob grapes.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 541
+    },
+    {
+        "S1": "Sam only gave ROB bananas.",
+        "S2": "Sam didn't give Ellen bananas.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 584
+    },
+    {
+        "S1": "Sam only gave Mary APPLES.",
+        "S2": "Sam also gave Ellen apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 327
+    },
+    {
+        "S1": "Sam only gave SUE apples.",
+        "S2": "Sam also gave Rob apples.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 101
+    },
+    {
+        "S1": "Sam only gave Bill APPLES.",
+        "S2": "Sam didn't give Mary apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 726
+    },
+    {
+        "S1": "Sam only gave MARY oranges.",
+        "S2": "Sam also gave Ellen oranges.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 321
+    },
+    {
+        "S1": "Sam only gave Ellen APPLES.",
+        "S2": "Sam didn't give Tom apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 214
+    },
+    {
+        "S1": "Sam only gave ROB bananas.",
+        "S2": "Sam also gave Rob oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 546
+    },
+    {
+        "S1": "Sam only gave Bill BANANAS.",
+        "S2": "Sam didn't give Bill grapes.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 686
+    },
+    {
+        "S1": "Sam only gave Ellen ORANGES.",
+        "S2": "Sam didn't give Ellen grapes.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 142
+    },
+    {
+        "S1": "Sam only gave Mary BANANAS.",
+        "S2": "Sam didn't give Ellen bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 330
+    },
+    {
+        "S1": "Sam only gave BILL bananas.",
+        "S2": "Sam didn't give Tom bananas.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 744
+    },
+    {
+        "S1": "Sam only gave Sue ORANGES.",
+        "S2": "Sam didn't give Sue grapes.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 14
+    },
+    {
+        "S1": "Sam only gave Ellen GRAPES.",
+        "S2": "Sam also gave Ellen oranges.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 183
+    },
+    {
+        "S1": "Sam only gave ELLEN apples.",
+        "S2": "Sam also gave Rob apples.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 229
+    },
+    {
+        "S1": "Sam only gave MARY oranges.",
+        "S2": "Sam didn't give Mary bananas.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 264
+    },
+    {
+        "S1": "Sam only gave MARY oranges.",
+        "S2": "Sam also gave Tom oranges.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 337
+    },
+    {
+        "S1": "Sam only gave Mary ORANGES.",
+        "S2": "Sam didn't give Tom oranges.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 338
+    },
+    {
+        "S1": "Sam only gave Mary GRAPES.",
+        "S2": "Sam also gave Mary apples.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 315
+    },
+    {
+        "S1": "Sam only gave SUE apples.",
+        "S2": "Sam also gave Mary apples.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 69
+    },
+    {
+        "S1": "Sam only gave Bill ORANGES.",
+        "S2": "Sam also gave Bill bananas.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 651
+    },
+    {
+        "S1": "Sam only gave Ellen BANANAS.",
+        "S2": "Sam also gave Ellen grapes.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 175
+    },
+    {
+        "S1": "Sam only gave Tom BANANAS.",
+        "S2": "Sam didn't give Tom oranges.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 420
+    },
+    {
+        "S1": "Sam only gave ROB apples.",
+        "S2": "Sam didn't give Sue apples.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 528
+    },
+    {
+        "S1": "Sam only gave SUE grapes.",
+        "S2": "Sam also gave Sue oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 50
+    },
+    {
+        "S1": "Sam only gave SUE grapes.",
+        "S2": "Sam didn't give Sue bananas.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 60
+    },
+    {
+        "S1": "Sam only gave Mary GRAPES.",
+        "S2": "Sam also gave Ellen grapes.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 335
+    },
+    {
+        "S1": "Sam only gave Rob ORANGES.",
+        "S2": "Sam also gave Rob bananas.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 523
+    },
+    {
+        "S1": "Sam only gave Sue BANANAS.",
+        "S2": "Sam didn't give Sue grapes.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 46
+    },
+    {
+        "S1": "Sam only gave Tom GRAPES.",
+        "S2": "Sam didn't give Tom apples.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 442
+    },
+    {
+        "S1": "Sam only gave TOM bananas.",
+        "S2": "Sam didn't give Tom grapes.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 428
+    },
+    {
+        "S1": "Sam only gave Rob APPLES.",
+        "S2": "Sam also gave Rob grapes.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 543
+    },
+    {
+        "S1": "Sam only gave ELLEN grapes.",
+        "S2": "Sam also gave Ellen oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 178
+    },
+    {
+        "S1": "Sam only gave Bill BANANAS.",
+        "S2": "Sam also gave Bill grapes.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 687
+    },
+    {
+        "S1": "Sam only gave MARY apples.",
+        "S2": "Sam also gave Ellen apples.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 325
+    },
+    {
+        "S1": "Sam only gave Sue APPLES.",
+        "S2": "Sam also gave Tom apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 87
+    },
+    {
+        "S1": "Sam only gave BILL grapes.",
+        "S2": "Sam didn't give Bill oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 689
+    },
+    {
+        "S1": "Sam only gave BILL apples.",
+        "S2": "Sam didn't give Bill bananas.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 664
+    },
+    {
+        "S1": "Sam only gave SUE apples.",
+        "S2": "Sam didn't give Sue bananas.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 24
+    },
+    {
+        "S1": "Sam only gave ELLEN oranges.",
+        "S2": "Sam didn't give Tom oranges.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 208
+    },
+    {
+        "S1": "Sam only gave TOM apples.",
+        "S2": "Sam didn't give Mary apples.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 468
+    },
+    {
+        "S1": "Sam only gave Tom APPLES.",
+        "S2": "Sam also gave Bill apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 503
+    },
+    {
+        "S1": "Sam only gave Sue BANANAS.",
+        "S2": "Sam didn't give Tom bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 90
+    },
+    {
+        "S1": "Sam only gave Ellen BANANAS.",
+        "S2": "Sam also gave Rob bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 235
+    },
+    {
+        "S1": "Sam only gave ROB grapes.",
+        "S2": "Sam also gave Rob oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 562
+    },
+    {
+        "S1": "Sam only gave TOM apples.",
+        "S2": "Sam also gave Bill apples.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 501
+    },
+    {
+        "S1": "Sam only gave Mary APPLES.",
+        "S2": "Sam also gave Mary bananas.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 283
+    },
+    {
+        "S1": "Sam only gave Ellen ORANGES.",
+        "S2": "Sam also gave Sue oranges.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 134
+    },
+    {
+        "S1": "Sam only gave Rob ORANGES.",
+        "S2": "Sam didn't give Rob apples.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 516
+    },
+    {
+        "S1": "Sam only gave Bill BANANAS.",
+        "S2": "Sam didn't give Ellen bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 714
+    },
+    {
+        "S1": "Sam only gave Rob BANANAS.",
+        "S2": "Sam also gave Sue bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 550
+    },
+    {
+        "S1": "Sam only gave Bill BANANAS.",
+        "S2": "Sam didn't give Mary bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 730
+    },
+    {
+        "S1": "Sam only gave Ellen GRAPES.",
+        "S2": "Sam didn't give Rob grapes.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 238
+    },
+    {
+        "S1": "Sam only gave ELLEN bananas.",
+        "S2": "Sam also gave Ellen grapes.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 173
+    },
+    {
+        "S1": "Sam only gave MARY apples.",
+        "S2": "Sam didn't give Mary oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 273
+    },
+    {
+        "S1": "Sam only gave TOM bananas.",
+        "S2": "Sam also gave Tom apples.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 425
+    },
+    {
+        "S1": "Sam only gave MARY apples.",
+        "S2": "Sam didn't give Mary grapes.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 284
+    },
+    {
+        "S1": "Sam only gave Mary ORANGES.",
+        "S2": "Sam didn't give Mary apples.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 260
+    },
+    {
+        "S1": "Sam only gave Rob APPLES.",
+        "S2": "Sam also gave Mary apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 599
+    },
+    {
+        "S1": "Sam only gave ROB apples.",
+        "S2": "Sam also gave Tom apples.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 613
+    },
+    {
+        "S1": "Sam only gave Rob ORANGES.",
+        "S2": "Sam didn't give Rob bananas.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 522
+    },
+    {
+        "S1": "Sam only gave Bill GRAPES.",
+        "S2": "Sam also gave Rob grapes.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 767
+    },
+    {
+        "S1": "Sam only gave Rob GRAPES.",
+        "S2": "Sam also gave Rob bananas.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 575
+    },
+    {
+        "S1": "Sam only gave Tom APPLES.",
+        "S2": "Sam also gave Tom grapes.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 415
+    },
+    {
+        "S1": "Sam only gave Mary BANANAS.",
+        "S2": "Sam didn't give Bill bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 378
+    },
+    {
+        "S1": "Sam only gave MARY apples.",
+        "S2": "Sam also gave Mary bananas.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 281
+    },
+    {
+        "S1": "Sam only gave SUE apples.",
+        "S2": "Sam didn't give Rob apples.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 100
+    },
+    {
+        "S1": "Sam only gave BILL bananas.",
+        "S2": "Sam also gave Bill grapes.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 685
+    },
+    {
+        "S1": "Sam only gave Rob GRAPES.",
+        "S2": "Sam didn't give Rob apples.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "position": 570
+    },
+    {
+        "S1": "Sam only gave SUE grapes.",
+        "S2": "Sam also gave Tom grapes.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 93
+    },
+    {
+        "S1": "Sam only gave ELLEN grapes.",
+        "S2": "Sam didn't give Rob grapes.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 236
+    },
+    {
+        "S1": "Sam only gave MARY grapes.",
+        "S2": "Sam also gave Mary bananas.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 317
+    },
+    {
+        "S1": "Sam only gave SUE apples.",
+        "S2": "Sam didn't give Bill apples.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "position": 116
+    }
+]

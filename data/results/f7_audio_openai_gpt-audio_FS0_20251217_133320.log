@@ -1,0 +1,193 @@
+=== Log for f7 (backend=openai, model=gpt-audio, run=20251217_133320) ===
+
+--- Attempt 1 for f7 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+---------------------------------------------------------------
+FOCUS GUIDANCE
+---------------------------------------------------------------
+The classification depends on the focused element in S1, because of
+the presence of 'only', in the following way: 'Sam only gave TOM
+oranges' entails that Sam did not give anyone else oranges. On the
+other hand, 'Sam only gave Tom ORANGES' entails that Sam didn't give
+anything else to Tom.
+
+You must follow this logic in determining the inference.  You must
+also refer to this logic in producing the explanation.
+        
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+Understood. I will now process the examples using the given rules. I’ll listen to each pair of sentences, transcribe them, mark the prosodic focus in S1, classify S2 as entailed, independent, or contradicted, and provide the explanation based on the focus logic.
+
+Let’s start.
+
+0  
+S1: Sam only gave BILL bananas.  
+S2: Sam also gave Bill grapes.  
+C  
+Because the focus in S1 is on BILL. This entails that Sam did not give bananas to anyone else. S2 says Sam gave Bill something else (grapes), which does not contradict that Sam only gave Bill bananas. It contradicts the typical reading of ‘only’ as it limits the kind of thing given; S2 contradicts the intended meaning that only bananas were given to Bill.
+
+1  
+S1: Sam only gave BILL bananas.  
+S2: Sam also gave Mary apples.  
+B  
+Because the focus in S1 is on BILL. This means Sam didn’t give bananas to anyone else. S2 talks about giving apples to Mary, which doesn’t affect the claim about who got bananas. So, they are independent.
+
+2  
+S1: Sam only gave SUE apples.  
+S2: Sam also gave Tom apples.  
+C  
+Because the focus in S1 is on SUE. This means Sam didn’t give apples to anyone else. S2 says that Tom also got apples. This directly contradicts S1.
+
+3  
+S1: Sam only gave BILL grapes.  
+S2: Sam didn’t give Bill oranges.  
+A  
+Because the focus in S1 is on GRAPES. This means that Bill only got grapes and nothing else (no oranges). S2 says Bill didn’t get oranges, which aligns with this. So it’s entailed.
+
+4  
+S1: Sam only gave BILL apples.  
+S2: Sam didn’t give Bill bananas.  
+A  
+Because the focus in S1 is on APPLES. This means Bill got no other fruits, like bananas. S2 says Bill didn’t get bananas, which is entailed by S1.
+
+5  
+S1: Sam only gave SUE apples.  
+S2: Sam didn’t give Sue bananas.  
+A  
+Because the focus in S1 is on APPLES. This means Sue didn’t get bananas or any other fruit. S2 says Sue didn’t get bananas. This is directly entailed by S1.
+
+6  
+S1: Sam only gave ELLEN oranges.  
+S2: Sam didn’t give Tom oranges.  
+B  
+Because the focus in S1 is on ELLEN. This means Ellen was the only recipient of oranges. S2 says Tom didn’t get oranges. That’s not a contradiction, nor does it follow directly—it’s independent.
+
+7  
+S1: Sam only gave TOM apples.  
+S2: Sam didn’t give Mary apples.  
+A  
+Because the focus in S1 is on TOM. This means Tom was the only one who got apples. S2 says Mary didn’t get apples. This follows directly from S1, so it’s entailed.
+
+8  
+S1: Sam only gave TOM apples.  
+S2: Sam also gave Bill apples.  
+C  
+Because the focus in S1 is on TOM. This means Tom was the only recipient of apples. S2 says Bill also got apples, which contradicts S1.
+
+9  
+S1: Sam only gave SUE bananas.  
+S2: Sam didn’t give Tom bananas.  
+A  
+Because the focus in S1 is on SUE. This means Sue was the only one who got bananas. S2 says Tom didn’t get bananas. That matches the meaning of S1, so it’s entailed.
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 1] for f7: 10/10 examples.
+
+✓ Finished processing input/f7
+  Results saved to: results/f7_audio_openai_gpt-audio_FS0_20251217_133320.csv
+  Log saved to:     results/f7_audio_openai_gpt-audio_FS0_20251217_133320.log
+

@@ -1,0 +1,356 @@
+=== Log for f2 (backend=gemini, model=gemini-2.0-flash, run=20251217_164100) ===
+
+--- Attempt 1 for f2 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+IMPORTANT:
+- The audio for ALL examples is ALREADY INCLUDED with this message.
+- You must NOT ask for audio or wait for additional input.
+- You must infer S1 and S2 ONLY from the provided audio.
+
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+1
+S1: Sam only gave ROB bananas.
+S2: Sam didn't give Tom bananas.
+B
+Because the first sentence only specifies who Sam gave bananas to, not who he didn't give bananas to.
+
+2
+S1: Sam only gave TOM grapes.
+S2: Sam didn't give Tom oranges.
+B
+Because the first sentence only specifies who Sam gave grapes to, not who he didn't give oranges to.
+
+3
+S1: Sam only gave SUE oranges.
+S2: Sam also gave Sue apples.
+C
+Because the first sentence states that Sam only gave Sue oranges, contradicting the second sentence that says he also gave her apples.
+
+4
+S1: Sam only gave SUE bananas.
+S2: Sam didn't give Rob bananas.
+B
+Because the first sentence only specifies who Sam gave bananas to, not who he didn't give bananas to.
+
+5
+S1: Sam only gave TOM oranges.
+S2: Sam didn't give Tom bananas.
+B
+Because the first sentence only specifies who Sam gave oranges to, not who he didn't give bananas to.
+
+6
+S1: Sam only gave SUE apples.
+S2: Sam didn't give Sue oranges.
+B
+Because the first sentence only specifies who Sam gave apples to, not who he didn't give oranges to.
+
+7
+S1: Sam only gave SUE grapes.
+S2: Sam didn't give Sue apples.
+B
+Because the first sentence only specifies who Sam gave grapes to, not who he didn't give apples to.
+
+8
+S1: Sam only gave ELLEN oranges.
+S2: Sam also gave Ellen bananas.
+C
+Because the first sentence states that Sam only gave Ellen oranges, contradicting the second sentence that says he also gave her bananas.
+
+9
+S1: Sam only gave MARY grapes.
+S2: Sam didn't give Mary apples.
+B
+Because the first sentence only specifies who Sam gave grapes to, not who he didn't give apples to.
+
+
+
+--- End of Raw Model Output ---
+
+❌ ERROR [attempt 1] for f2: expected 10 examples but got 9.
+   Model indices found: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+🔁 Incomplete output for f2, retrying (attempt 2)...
+
+--- Attempt 2 for f2 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+IMPORTANT:
+- The audio for ALL examples is ALREADY INCLUDED with this message.
+- You must NOT ask for audio or wait for additional input.
+- You must infer S1 and S2 ONLY from the provided audio.
+
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0
+S1: Sam only gave ROB bananas.
+S2: Sam didn't give Tom bananas.
+B
+Because S1 is about Rob and S2 is about Tom.
+
+1
+S1: Sam only gave TOM grapes.
+S2: Sam didn't give Tom oranges.
+B
+Because S1 is about grapes and S2 is about oranges.
+
+2
+S1: Sam only gave SUE oranges.
+S2: Sam also gave Sue apples.
+C
+Because S1 states Sue only received oranges, contradicting S2 which states she also received apples.
+
+3
+S1: Sam only gave SUE bananas.
+S2: Sam didn't give Rob bananas.
+B
+Because S1 is about Sue and S2 is about Rob.
+
+4
+S1: Sam only gave TOM oranges.
+S2: Sam didn't give Tom bananas.
+B
+Because S1 is about oranges and S2 is about bananas.
+
+5
+S1: Sam only gave SUE apples.
+S2: Sam didn't give Sue oranges.
+B
+Because S1 is about apples and S2 is about oranges.
+
+6
+S1: Sam only gave SUE grapes.
+S2: Sam didn't give Sue apples.
+B
+Because S1 is about grapes and S2 is about apples.
+
+7
+S1: Sam only gave ELLEN oranges.
+S2: Sam also gave Ellen bananas.
+C
+Because S1 states Ellen only received oranges, contradicting S2 which states she also received bananas.
+
+8
+S1: Sam only gave MARY grapes.
+S2: Sam didn't give Mary apples.
+B
+Because S1 is about grapes and S2 is about apples.
+
+9
+S1: Sam only gave BILL oranges.
+S2: Sam also gave Mary oranges.
+B
+Because S1 is about Bill and S2 is about Mary.
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 2] for f2: 10/10 examples.
+
+✓ Finished processing input/f2
+  Results saved to: results/f2_audio_gemini_gemini-2.0-flash_FS0_20251217_164100.csv
+  Log saved to:     results/f2_audio_gemini_gemini-2.0-flash_FS0_20251217_164100.log
+

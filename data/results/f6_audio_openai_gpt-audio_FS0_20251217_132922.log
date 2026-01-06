@@ -1,0 +1,176 @@
+=== Log for f6 (backend=openai, model=gpt-audio, run=20251217_132922) ===
+
+--- Attempt 1 for f6 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0  
+S1: SAM only gave ROB apples.  
+S2: SAM didn't give SUE apples.  
+A  
+Because if Sam only gave Rob apples, that implies Sam didn't give apples to anyone else, including Sue.
+
+1  
+S1: SAM only gave SUE GRAPES.  
+S2: SAM also gave SUE oranges.  
+C  
+Because saying Sam only gave Sue grapes means oranges would contradict this exclusivity—grapes are the only thing mentioned.
+
+2  
+S1: SAM only gave SUE GRAPES.  
+S2: SAM didn't give SUE bananas.  
+A  
+Because if Sam only gave Sue grapes, it implies no other fruits, including bananas.
+
+3  
+S1: SAM only gave MARY GRAPES.  
+S2: SAM also gave ELLEN grapes.  
+C  
+Because if Sam only gave Mary grapes, giving the same to Ellen contradicts this exclusivity.
+
+4  
+S1: SAM only gave ROB ORANGES.  
+S2: SAM also gave ROB bananas.  
+C  
+Because if Sam only gave Rob oranges, giving Rob bananas contradicts that exclusivity.
+
+5  
+S1: SAM only gave SUE BANANAS.  
+S2: SAM didn't give SUE grapes.  
+A  
+Because if Sam only gave Sue bananas, that excludes other fruits like grapes.
+
+6  
+S1: SAM only gave TOM GRAPES.  
+S2: SAM didn't give TOM apples.  
+A  
+Because if Sam only gave Tom grapes, apples are excluded, so it's entailed that Tom didn't get apples.
+
+7  
+S1: SAM only gave TOM BANANAS.  
+S2: SAM didn't give TOM grapes.  
+A  
+Because if Sam only gave Tom bananas, any other fruit such as grapes is excluded.
+
+8  
+S1: SAM only gave ROB APPLES.  
+S2: SAM also gave ROB grapes.  
+C  
+Because if Sam only gave Rob apples, giving him grapes contradicts that exclusivity.
+
+9  
+S1: SAM only gave ELLEN GRAPES.  
+S2: SAM also gave ELLEN oranges.  
+C  
+Because if Sam only gave Ellen grapes, giving her oranges contradicts the exclusivity.
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 1] for f6: 10/10 examples.
+
+✓ Finished processing input/f6
+  Results saved to: results/f6_audio_openai_gpt-audio_FS0_20251217_132922.csv
+  Log saved to:     results/f6_audio_openai_gpt-audio_FS0_20251217_132922.log
+

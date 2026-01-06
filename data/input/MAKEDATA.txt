@@ -1,0 +1,18 @@
+generateData.py
+  output: all_examples.json
+
+make_balanced_subset.py
+   INPUT_FILE = "all_examples.json"     # your full JSON file
+   OUTPUT_FILE = "balanced_100.json"    # output subset file
+
+splitFiles.py
+   input balanced_100.json
+   output
+     f1.json through f10.json
+
+
+
+read json files with quicktime audio recording
+save m4a
+convert to wav
+ffmpeg -i f1.m4a -ac 1 -ar 44100 -sample_fmt s16 f1.wav

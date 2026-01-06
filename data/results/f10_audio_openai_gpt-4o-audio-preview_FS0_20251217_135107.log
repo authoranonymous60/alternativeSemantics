@@ -1,0 +1,176 @@
+=== Log for f10 (backend=openai, model=gpt-4o-audio-preview, run=20251217_135107) ===
+
+--- Attempt 1 for f10 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0  
+S1: Sam ONLY gave Tom apples.  
+S2: Sam also gave Tom grapes.  
+C  
+Because S2 contradicts S1 by stating that Tom received more than just apples.
+
+1  
+S1: Sam only gave Mary BANANAS.  
+S2: Sam didn’t give Bill bananas.  
+B  
+Because S2 is independent of S1. Mary's gifts do not imply anything about what Bill received.
+
+2  
+S1: Sam only GAVE Mary apples.  
+S2: Sam also gave Mary bananas.  
+C  
+Because S2 contradicts S1 by claiming that Mary received more than just apples.
+
+3  
+S1: Sam only gave Sue APPLES.  
+S2: Sam didn’t give Rob apples.  
+B  
+Because S2 is independent of S1. Sue receiving apples does not affect whether Rob did or did not get apples.
+
+4  
+S1: Sam only gave BILL bananas.  
+S2: Sam also gave Bill grapes.  
+C  
+Because S2 contradicts S1 by showing that Bill received more than just bananas.
+
+5  
+S1: Sam only gave ROB grapes.  
+S2: Sam didn’t give Rob apples.  
+A  
+Because S2 is entailed by S1. If Rob only got grapes, then he did not get apples.
+
+6  
+S1: Sam only gave Sue GRAPES.  
+S2: Sam also gave Tom grapes.  
+C  
+Because S2 contradicts S1, which implies Sue was the only person given grapes.
+
+7  
+S1: Sam only gave Ellen GRAPES.  
+S2: Sam didn’t give Rob grapes.  
+A  
+Because S2 is entailed by S1. If Ellen was the only person who got grapes, then Rob must not have gotten any grapes.
+
+8  
+S1: Sam only gave MARY grapes.  
+S2: Sam also gave Mary bananas.  
+C  
+Because S2 contradicts S1, which claims Mary only received grapes.
+
+9  
+S1: Sam only gave Sue APPLES.  
+S2: Sam didn’t give Bill apples.  
+A  
+Because S2 is entailed by S1. If only Sue got apples, then Bill could not have gotten apples.
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 1] for f10: 10/10 examples.
+
+✓ Finished processing input/f10
+  Results saved to: results/f10_audio_openai_gpt-4o-audio-preview_FS0_20251217_135107.csv
+  Log saved to:     results/f10_audio_openai_gpt-4o-audio-preview_FS0_20251217_135107.log
+

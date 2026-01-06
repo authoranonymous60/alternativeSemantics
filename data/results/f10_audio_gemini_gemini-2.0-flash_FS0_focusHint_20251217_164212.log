@@ -1,0 +1,196 @@
+=== Log for f10 (backend=gemini, model=gemini-2.0-flash, run=20251217_164212) ===
+
+--- Attempt 1 for f10 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+IMPORTANT:
+- The audio for ALL examples is ALREADY INCLUDED with this message.
+- You must NOT ask for audio or wait for additional input.
+- You must infer S1 and S2 ONLY from the provided audio.
+
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+---------------------------------------------------------------
+FOCUS GUIDANCE
+---------------------------------------------------------------
+The classification depends on the focused element in S1, because of
+the presence of 'only', in the following way: 'Sam only gave TOM
+oranges' entails that Sam did not give anyone else oranges. On the
+other hand, 'Sam only gave Tom ORANGES' entails that Sam didn't give
+anything else to Tom.
+
+You must follow this logic in determining the inference.  You must
+also refer to this logic in producing the explanation.
+        
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0
+S1: Sam ONLY gave Tom apples.
+S2: Sam also gave Tom grapes.
+C
+Because S1 entails that Sam didn't give Tom anything other than apples, which contradicts S2.
+
+1
+S1: Sam ONLY gave Mary bananas.
+S2: Sam didn't give Bill bananas.
+B
+Because S1 entails that Sam didn't give anyone other than Mary bananas, which is independent of S2.
+
+2
+S1: Sam ONLY gave Mary apples.
+S2: Sam also gave Mary bananas.
+C
+Because S1 entails that Sam didn't give Mary anything other than apples, which contradicts S2.
+
+3
+S1: Sam ONLY gave Sue apples.
+S2: Sam didn't give Rob apples.
+B
+Because S1 entails that Sam didn't give anyone other than Sue apples, which is independent of S2.
+
+4
+S1: Sam ONLY gave Bill bananas.
+S2: Sam also gave Bill grapes.
+C
+Because S1 entails that Sam didn't give Bill anything other than bananas, which contradicts S2.
+
+5
+S1: Sam ONLY gave Rob grapes.
+S2: Sam didn't give Rob apples.
+B
+Because S1 entails that Sam didn't give anyone other than Rob grapes, which is independent of S2.
+
+6
+S1: Sam ONLY gave Sue grapes.
+S2: Sam also gave Tom grapes.
+C
+Because S1 entails that Sam didn't give Sue anything other than grapes, which contradicts S2.
+
+7
+S1: Sam ONLY gave Ellen grapes.
+S2: Sam didn't give Rob grapes.
+B
+Because S1 entails that Sam didn't give anyone other than Ellen grapes, which is independent of S2.
+
+8
+S1: Sam ONLY gave Mary grapes.
+S2: Sam also gave Mary bananas.
+C
+Because S1 entails that Sam didn't give Mary anything other than grapes, which contradicts S2.
+
+9
+S1: Sam ONLY gave Sue apples.
+S2: Sam didn't give Bill apples.
+B
+Because S1 entails that Sam didn't give anyone other than Sue apples, which is independent of S2.
+
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 1] for f10: 10/10 examples.
+
+✓ Finished processing input/f10
+  Results saved to: results/f10_audio_gemini_gemini-2.0-flash_FS0_focusHint_20251217_164212.csv
+  Log saved to:     results/f10_audio_gemini_gemini-2.0-flash_FS0_focusHint_20251217_164212.log
+

@@ -1,0 +1,174 @@
+=== Log for f8 (backend=openai, model=gpt-5, run=20251218_173456) ===
+
+--- Attempt 1 for f8 ---
+
+--- Prompt sent to model (ORACLE) ---
+
+
+You are performing a semantic classification task.
+
+
+You are given text for S1 and S2.
+Your task is to classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1: Sam only gave Ellen BANANAS.
+S2: Sam also gave Rob bananas.
+A
+Because...
+
+1
+S1: Sam only gave ROB grapes.
+S2: Sam also gave Rob oranges.
+A
+Because...
+
+2
+S1: Sam only gave TOM apples.
+S2: Sam also gave Bill apples.
+A
+Because...
+
+3
+S1: Sam only gave Mary APPLES.
+S2: Sam also gave Mary bananas.
+A
+Because...
+
+4
+S1: Sam only gave Ellen ORANGES.
+S2: Sam also gave Sue oranges.
+A
+Because...
+
+5
+S1: Sam only gave Rob ORANGES.
+S2: Sam didn't give Rob apples.
+A
+Because...
+
+6
+S1: Sam only gave Bill BANANAS.
+S2: Sam didn't give Ellen bananas.
+A
+Because...
+
+7
+S1: Sam only gave Rob BANANAS.
+S2: Sam also gave Sue bananas.
+A
+Because...
+
+8
+S1: Sam only gave Bill BANANAS.
+S2: Sam didn't give Mary bananas.
+A
+Because...
+
+9
+S1: Sam only gave Ellen GRAPES.
+S2: Sam didn't give Rob grapes.
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of oracle prompt ---
+
+
+--- Raw Model Output ---
+
+0
+S1: Sam only gave Ellen BANANAS.
+S2: Sam also gave Rob bananas.
+B
+Because S1 limits what Ellen received (only bananas) but says nothing about who else got bananas.
+
+1
+S1: Sam only gave ROB grapes.
+S2: Sam also gave Rob oranges.
+B
+Because S1 limits the recipients of grapes to Rob, but says nothing about whether Rob also got oranges.
+
+2
+S1: Sam only gave TOM apples.
+S2: Sam also gave Bill apples.
+C
+Because S1 says only Tom received apples, so Bill receiving apples contradicts it.
+
+3
+S1: Sam only gave Mary APPLES.
+S2: Sam also gave Mary bananas.
+C
+Because S1 says Mary received only apples, so her receiving bananas contradicts it.
+
+4
+S1: Sam only gave Ellen ORANGES.
+S2: Sam also gave Sue oranges.
+B
+Because S1 limits what Ellen received (only oranges) but says nothing about giving oranges to others.
+
+5
+S1: Sam only gave Rob ORANGES.
+S2: Sam didn't give Rob apples.
+A
+Because if Rob got only oranges, then he did not get apples.
+
+6
+S1: Sam only gave Bill BANANAS.
+S2: Sam didn't give Ellen bananas.
+B
+Because S1 limits what Bill received (only bananas) but says nothing about whether Ellen got bananas.
+
+7
+S1: Sam only gave Rob BANANAS.
+S2: Sam also gave Sue bananas.
+B
+Because S1 limits what Rob received (only bananas) but says nothing about giving bananas to Sue.
+
+8
+S1: Sam only gave Bill BANANAS.
+S2: Sam didn't give Mary bananas.
+B
+Because S1 limits what Bill received (only bananas) but says nothing about whether Mary got bananas.
+
+9
+S1: Sam only gave Ellen GRAPES.
+S2: Sam didn't give Rob grapes.
+B
+Because S1 limits what Ellen received (only grapes) but says nothing about whether Rob got grapes.
+
+--- End of Raw Model Output ---
+
+✓ Output coverage OK [attempt 1] for f8: 10/10 blocks (few-shot optional).
+
+✓ Finished processing input/f8
+  Results saved to: results/f8_oracle_openai_gpt-5_FS0_20251218_173456.csv
+  Log saved to:     results/f8_oracle_openai_gpt-5_FS0_20251218_173456.log
+

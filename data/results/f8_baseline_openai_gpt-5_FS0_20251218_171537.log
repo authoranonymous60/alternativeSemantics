@@ -1,0 +1,174 @@
+=== Log for f8 (backend=openai, model=gpt-5, run=20251218_171537) ===
+
+--- Attempt 1 for f8 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+You are given text for S1 and S2.
+Your task is to classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1: Sam only gave Ellen bananas.
+S2: Sam also gave Rob bananas.
+A
+Because...
+
+1
+S1: Sam only gave Rob grapes.
+S2: Sam also gave Rob oranges.
+A
+Because...
+
+2
+S1: Sam only gave Tom apples.
+S2: Sam also gave Bill apples.
+A
+Because...
+
+3
+S1: Sam only gave Mary apples.
+S2: Sam also gave Mary bananas.
+A
+Because...
+
+4
+S1: Sam only gave Ellen oranges.
+S2: Sam also gave Sue oranges.
+A
+Because...
+
+5
+S1: Sam only gave Rob oranges.
+S2: Sam didn't give Rob apples.
+A
+Because...
+
+6
+S1: Sam only gave Bill bananas.
+S2: Sam didn't give Ellen bananas.
+A
+Because...
+
+7
+S1: Sam only gave Rob bananas.
+S2: Sam also gave Sue bananas.
+A
+Because...
+
+8
+S1: Sam only gave Bill bananas.
+S2: Sam didn't give Mary bananas.
+A
+Because...
+
+9
+S1: Sam only gave Ellen grapes.
+S2: Sam didn't give Rob grapes.
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0
+S1: Sam only gave Ellen bananas.
+S2: Sam also gave Rob bananas.
+C
+Because "only gave Ellen bananas" rules out giving bananas to anyone else, so he didn't give Rob bananas.
+
+1
+S1: Sam only gave Rob grapes.
+S2: Sam also gave Rob oranges.
+C
+Because "only gave Rob grapes" means he didn't give Rob anything besides grapes, so giving Rob oranges is excluded.
+
+2
+S1: Sam only gave Tom apples.
+S2: Sam also gave Bill apples.
+C
+Because "only gave Tom apples" precludes giving apples to anyone other than Tom, including Bill.
+
+3
+S1: Sam only gave Mary apples.
+S2: Sam also gave Mary bananas.
+C
+Because "only gave Mary apples" means he didn't give Mary anything other than apples, so not bananas.
+
+4
+S1: Sam only gave Ellen oranges.
+S2: Sam also gave Sue oranges.
+C
+Because "only gave Ellen oranges" rules out giving oranges to anyone else, including Sue.
+
+5
+S1: Sam only gave Rob oranges.
+S2: Sam didn't give Rob apples.
+A
+Because if he only gave Rob oranges, then he necessarily did not give Rob apples.
+
+6
+S1: Sam only gave Bill bananas.
+S2: Sam didn't give Ellen bananas.
+A
+Because giving bananas only to Bill entails he did not give bananas to Ellen.
+
+7
+S1: Sam only gave Rob bananas.
+S2: Sam also gave Sue bananas.
+C
+Because "only gave Rob bananas" precludes giving bananas to Sue.
+
+8
+S1: Sam only gave Bill bananas.
+S2: Sam didn't give Mary bananas.
+A
+Because giving bananas only to Bill entails he did not give bananas to Mary.
+
+9
+S1: Sam only gave Ellen grapes.
+S2: Sam didn't give Rob grapes.
+A
+Because giving grapes only to Ellen entails he did not give grapes to Rob.
+
+--- End of Raw Model Output ---
+
+✓ Output coverage OK [attempt 1] for f8: 10/10 blocks (few-shot optional).
+
+✓ Finished processing input/f8
+  Results saved to: results/f8_baseline_openai_gpt-5_FS0_20251218_171537.csv
+  Log saved to:     results/f8_baseline_openai_gpt-5_FS0_20251218_171537.log
+

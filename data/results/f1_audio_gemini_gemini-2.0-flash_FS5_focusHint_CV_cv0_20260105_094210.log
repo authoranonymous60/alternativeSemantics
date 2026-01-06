@@ -1,0 +1,237 @@
+=== Log for f1 (backend=gemini, model=gemini-2.0-flash, run=20260105_094210, fold=0) ===
+
+--- Attempt 1 for f1_cv0 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+IMPORTANT:
+- The audio for ALL examples is ALREADY INCLUDED with this message.
+- You must NOT ask for audio or wait for additional input.
+- You must infer S1 and S2 ONLY from the provided audio.
+
+
+
+---------------------------------------------------------------
+FOCUS GUIDANCE
+---------------------------------------------------------------
+The classification depends on the focused element in S1, because of
+the presence of 'only', in the following way: 'Sam only gave TOM
+oranges' entails that Sam did not give anyone else oranges. On the
+other hand, 'Sam only gave Tom ORANGES' entails that Sam didn't give
+anything else to Tom.
+
+You must follow this logic in determining the inference. You must
+also refer to this logic in producing the explanation.
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+The following numbered examples ALREADY INCLUDE a correct answer: 0, 1, 2, 3, 4
+
+IMPORTANT:
+- These examples are NOT demonstrations.
+- They are full task items, just like the later ones.
+- The presence of an answer does NOT mean you should skip them.
+- You MUST produce a complete output block for EVERY numbered example (0–9).
+
+For each numbered example (0–9), you must:
+- Transcribe S1 and S2 from the audio
+- Mark the focused element in S1 using UPPERCASE
+- Provide your own classification (A, B, or C)
+- Provide an explanation
+
+0
+S1: Sam only gave BILL grapes.
+S2: Sam also gave Sue grapes.
+C
+Because...
+
+1
+S1: Sam only gave SUE oranges.
+S2: Sam also gave Rob oranges.
+C
+Because...
+
+2
+S1: Sam only gave SUE grapes.
+S2: Sam didn't give Ellen grapes.
+A
+Because...
+
+3
+S1: Sam only gave TOM apples.
+S2: Sam didn't give Tom grapes.
+B
+Because...
+
+4
+S1: Sam only gave Rob ORANGES.
+S2: Sam also gave Rob apples.
+C
+Because...
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+0
+S1: Sam only gave BILL grapes.
+S2: Sam also gave Sue grapes.
+C
+Because Sam only gave grapes to Bill, and Sue is not Bill.
+
+1
+S1: Sam only gave SUE oranges.
+S2: Sam also gave Rob oranges.
+C
+Because Sam only gave oranges to Sue, and Rob is not Sue.
+
+2
+S1: Sam only gave SUE grapes.
+S2: Sam didn't give Ellen grapes.
+A
+Because Sam only gave grapes to Sue, so he didn't give grapes to Ellen.
+
+3
+S1: Sam only gave TOM apples.
+S2: Sam didn't give Tom grapes.
+B
+Because the focus is on Tom, so the statement only restricts who received apples, not what Tom received.
+
+4
+S1: Sam only gave Rob ORANGES.
+S2: Sam also gave Rob apples.
+C
+Because Sam only gave oranges to Rob, so he didn't give apples to Rob.
+
+5
+S1: Sam only gave SUE grapes.
+S2: Sam didn't give Tom grapes.
+A
+Because Sam only gave grapes to Sue, so he didn't give grapes to Tom.
+
+6
+S1: Sam only gave ELLEN bananas.
+S2: Sam also gave Mary bananas.
+C
+Because Sam only gave bananas to Ellen, and Mary is not Ellen.
+
+7
+S1: Sam only gave ROB bananas.
+S2: Sam didn't give Rob oranges.
+B
+Because the focus is on Rob, so the statement only restricts who received bananas, not what Rob received.
+
+8
+S1: Sam only gave MARY bananas.
+S2: Sam also gave Mary apples.
+C
+Because Sam only gave bananas to Mary, so he didn't give apples to Mary.
+
+9
+S1: Sam only gave SUE oranges.
+S2: Sam didn't give Rob oranges.
+A
+Because Sam only gave oranges to Sue, so he didn't give oranges to Rob.
+
+--- End of Raw Model Output ---
+
+✓ Output coverage OK [attempt 1] for f1_cv0: 10 parsed blocks; 10/10 indices in-range; all 5 required test indices present.
+
+✓ Finished processing input/f1_cv0
+  Results saved to: results/f1_audio_gemini_gemini-2.0-flash_FS5_focusHint_CV_cv0_20260105_094210.csv
+  Log saved to:     results/f1_audio_gemini_gemini-2.0-flash_FS5_focusHint_CV_cv0_20260105_094210.log
+

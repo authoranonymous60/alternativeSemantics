@@ -1,0 +1,182 @@
+=== Log for f2 (backend=openai, model=gpt-audio, run=20251217_132922) ===
+
+--- Attempt 1 for f2 ---
+
+--- Prompt sent to model ---
+
+
+You are performing a semantic classification task.
+
+
+Your task has three parts:
+1. Transcribe S1 and S2 from audio.
+2. Mark prosodic focus in S1 using UPPERCASE.
+3. Classify S2 relative to S1:
+   A = entailed
+   B = independent
+   C = contradicted.
+
+
+0
+S1:
+S2:
+A
+Because...
+
+1
+S1:
+S2:
+A
+Because...
+
+2
+S1:
+S2:
+A
+Because...
+
+3
+S1:
+S2:
+A
+Because...
+
+4
+S1:
+S2:
+A
+Because...
+
+5
+S1:
+S2:
+A
+Because...
+
+6
+S1:
+S2:
+A
+Because...
+
+7
+S1:
+S2:
+A
+Because...
+
+8
+S1:
+S2:
+A
+Because...
+
+9
+S1:
+S2:
+A
+Because...
+
+
+
+Your output must follow this structure:
+
+<index>
+S1: ...
+S2: ...
+A
+Because <explanation>
+
+Do not add meta-comments or tool-use descriptions.
+
+
+
+---------------------------------------------------------------
+NEW INPUT EXAMPLES
+---------------------------------------------------------------
+<BEGIN_NEW>
+
+<END_NEW>
+
+Begin now.
+
+
+--- End of prompt ---
+
+
+--- Raw Model Output ---
+
+Understood. I’ll begin by analyzing and transcribing each S1 and S2 pair and classifying them. 
+
+Let’s move through each pair in turn.
+
+0
+S1: Sam only gave ROB bananas. Sam didn’t give Tom bananas.
+S2: Sam only gave TOM grapes. Sam didn’t give Tom oranges.
+C
+Because S1 states that Sam gave bananas to Rob and not Tom, while S2 involves Tom receiving grapes and not oranges. The focus shift and the entities involved (Rob versus Tom) contradict the exclusive nature implied by “only.” If Sam only gave something to Rob, then any focus involving Tom on a similar exclusive statement contradicts that idea.
+
+1
+S1: Sam only gave TOM grapes. Sam didn’t give Tom oranges.
+S2: Sam only gave SUE oranges. Sam also gave Sue apples.
+B
+Because the focus of S1 is on Tom receiving grapes (and not oranges), whereas S2 focuses on Sue receiving oranges and apples. These two statements are about different individuals (Tom vs. Sue), and the sets of objects differ (grapes vs. oranges and apples), so they’re independent.
+
+2
+S1: Sam only gave SUE oranges. Sam also gave Sue apples.
+S2: Sam only gave SUE bananas. Sam didn’t give Rob bananas.
+C 
+Because S1 claims that Sue received oranges and also apples. The “only” suggests exclusivity around oranges (in contrast to others), but it includes apples. In S2, Sue is said to only receive bananas, which contradicts S1’s mention of oranges and apples.
+
+3
+S1: Sam only gave SUE bananas. Sam didn’t give Rob bananas.
+S2: Sam only gave TOM oranges. Sam didn’t give Tom bananas.
+B
+Because S1 focuses on Sue receiving bananas, and states that Rob did not get bananas. S2 involves Tom receiving oranges but not bananas. The subjects are different (Sue vs. Tom), and the objects differ (bananas vs. oranges). There’s no direct entailment or contradiction—so the statements are independent.
+
+4
+S1: Sam only gave TOM oranges. Sam didn’t give Tom bananas.
+S2: Sam only gave SUE apples. Sam didn’t give Sue oranges.
+B
+Because S1 focuses on Tom receiving oranges (not bananas), while S2 focuses on Sue receiving apples (and not oranges). These statements focus on different individuals and different objects (Tom and oranges vs. Sue and apples), so they’re independent.
+
+5
+S1: Sam only gave SUE apples. Sam didn’t give Sue oranges.
+S2: Sam only gave SUE grapes. Sam didn’t give Sue apples.
+C
+Because S1 states that Sue received apples, and explicitly says she didn’t receive oranges. Meanwhile, S2 claims that Sue only received grapes and didn’t receive apples. This contradicts the first statement, since the sets of objects specified conflict (apples vs. grapes) and one denies what the other affirms.
+
+6
+S1: Sam only gave ELLEN oranges. Sam also gave Ellen bananas.
+S2: Sam only gave MARY grapes. Sam didn’t give Mary apples.
+B
+Because S1 is about Ellen, and involves oranges and bananas. S2 is about Mary, involving grapes and apples. These involve different individuals and different sets of objects. Thus, they are independent.
+
+7
+S1: Sam only gave MARY grapes. Sam didn’t give Mary apples.
+S2: Sam only gave BILL oranges. Sam also gave Mary oranges.
+C
+Because S1 states that Mary exclusively received grapes (and not apples). S2 asserts that Bill exclusively received oranges but also says Mary received oranges. This contradicts S1, as S1’s exclusivity implies Mary didn’t get oranges, while S2 states Mary did get something beyond grapes.
+
+8
+S1: Sam only gave BILL oranges. Sam also gave Mary oranges.
+S2: Sam only gave TOM grapes. Sam didn’t give Tom bananas.
+B
+Because S1 involves Bill getting only oranges and Mary getting oranges too. S2 focuses on Tom receiving grapes and not bananas. These pertain to different individuals and different distributions, so they are independent.
+
+9
+S1: Sam only gave MARY grapes. Sam didn’t give Mary apples.
+S2: Sam only gave SUE oranges. Sam also gave Sue apples.
+B
+Because S1 is about Mary getting grapes (not apples), and S2 is about Sue receiving oranges and apples. Different individuals getting different items means the statements are independent. 
+
+This concludes the classification task across all pairs.
+
+--- End of Raw Model Output ---
+
+✓ Output block count and indices OK [attempt 1] for f2: 10/10 examples.
+
+✓ Finished processing input/f2
+  Results saved to: results/f2_audio_openai_gpt-audio_FS0_20251217_132922.csv
+  Log saved to:     results/f2_audio_openai_gpt-audio_FS0_20251217_132922.log
+
