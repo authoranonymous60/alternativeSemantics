@@ -18,3 +18,21 @@ Install dependencies:
 python -m venv .venv
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
+
+```API Keys
+`export OPENAI_API_KEY="your_openai_key`
+`export GOOGLE_API_KEY="your_gemini_key`
+
+```Run
+`python code/audioInput.py \
+  --backend openai \
+  --model gpt-audio \
+  --mode audio \
+  data/input/f2 0 10`
+
+
+
+
+```Notes
+
+This repository was originally provided for anonymous review purposes.
