@@ -37,9 +37,6 @@ export OPENAI_API_KEY="your_openai_key"
 export GOOGLE_API_KEY="your_gemini_key"
 ```
 
-Each collaborator should use their own API keys.\
-Do not commit API keys to the repository.
-
 ## Example Run
 
 ``` bash
