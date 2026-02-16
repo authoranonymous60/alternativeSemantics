@@ -8,8 +8,17 @@ focus-sensitive semantic inference from spoken language.
 - `data/input/` — input audio + JSON files
 - `data/results/` — CSV outputs used in the paper
 
-##
-Here is a test example
+## Install and Run
+
+python -m venv .venv
+source .venv/bin/activate   # on Windows: .venv\Scripts\activate
+pip install -r requirements.txt
+
+export OPENAI_API_KEY="..."
+export GOOGLE_API_KEY="..."
+
+Run
+
 python code/audioInput.py --backend openai --model gpt-audio --mode audio data/input/f2 0 10
 
 models currently available: gpt-audio, gpt-4o-audio-preview, gemini-2.0-flash
