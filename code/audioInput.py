@@ -803,7 +803,7 @@ def main():
                 continue
 
             # Attach metadata & write per-run CSV
-            csv_path = f"results/{file_id}_{runID}.csv"
+            csv_path = f"data/results/{file_id}_{runID}.csv"
             extra_fields = {
                 "file_id": file_id,
                 "mode": args.mode,
@@ -846,7 +846,7 @@ def main():
             parts.append("CV")
 
         master_id = "_".join(parts)
-        master_csv_path = f"results/master_{master_id}_{run_timestamp}.csv"
+        master_csv_path = f"data/results/master_{master_id}_{run_timestamp}.csv"
 
         write_results_csv(master_results, master_csv_path, fieldnames=CSV_COLUMNS)
         print(f"\n✓ Master CSV saved to: {master_csv_path}\n")
