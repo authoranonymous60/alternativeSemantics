@@ -1,0 +1,7 @@
+source_row_index,Status,Progress,Duration (in seconds),Finished,DistributionChannel,UserLanguage,UV1,UV2,UV3,BC1,BC2,speaker,answered_questions,correct_answers,incorrect_answers,accuracy_pct,is_full_24_item_response,incorrect_question_ids,incorrect_details
+5,0,100,499,1,anonymous,EN,1,1,1,1,1,speaker0,24,24,0,100.0,1,,
+9,0,100,128,1,anonymous,EN,1,1,1,1,1,speaker1,24,24,0,100.0,1,,
+10,0,100,243,1,anonymous,EN,1,1,1,1,1,speaker1,24,24,0,100.0,1,,
+16,0,100,180,1,anonymous,EN,1,1,1,1,1,speaker0,24,24,0,100.0,1,,
+18,0,100,194,1,anonymous,EN,1,1,1,1,2,speaker0,24,24,0,100.0,1,,
+22,0,100,222,1,anonymous,EN,1,1,1,1,2,speaker1,24,24,0,100.0,1,,

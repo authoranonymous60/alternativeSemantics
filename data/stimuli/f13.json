@@ -1,0 +1,74 @@
+[
+    {
+        "S1": "Sam only gave Ellen BANANAS.",
+        "S2": "Sam also gave Tom bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 219
+    },
+    {
+        "S1": "Sam only gave Ellen ORANGES.",
+        "S2": "Sam also gave Rob oranges.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 227
+    },
+    {
+        "S1": "Sam only gave Rob BANANAS.",
+        "S2": "Sam also gave Ellen bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 587
+    },
+    {
+        "S1": "Sam only gave Tom BANANAS.",
+        "S2": "Sam also gave Mary bananas.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "position": 475
+    },
+    {
+        "S1": "Sam only gave Ellen ORANGES.",
+        "S2": "Sam also gave Ellen apples.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 135
+    },
+    {
+        "S1": "Sam only gave Rob BANANAS.",
+        "S2": "Sam also gave Rob oranges.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 551
+    },
+    {
+        "S1": "Sam only gave Sue ORANGES.",
+        "S2": "Sam also gave Sue bananas.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 11
+    },
+    {
+        "S1": "Sam only gave Tom APPLES.",
+        "S2": "Sam also gave Tom bananas.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "position": 411
+    }
+]

@@ -1,0 +1,90 @@
+[
+    {
+        "S1": "Sam only gave ROB bananas.",
+        "S2": "Sam also gave Rob oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "2",
+        "source": "original",
+        "original_file": "f4",
+        "original_index": 4
+    },
+    {
+        "S1": "Sam only gave Mary APPLES.",
+        "S2": "Sam also gave Mary bananas.",
+        "A": "C",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "2",
+        "source": "original",
+        "original_file": "f8",
+        "original_index": 3
+    },
+    {
+        "S1": "Sam only gave SUE bananas.",
+        "S2": "Sam didn't give Rob bananas.",
+        "A": "A",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "1",
+        "source": "original",
+        "original_file": "f2",
+        "original_index": 3
+    },
+    {
+        "S1": "Sam only gave Mary GRAPES.",
+        "S2": "Sam also gave Ellen grapes.",
+        "A": "B",
+        "focus": 2,
+        "logic": "POS",
+        "alternative": "1",
+        "source": "original",
+        "original_file": "f6",
+        "original_index": 3
+    },
+    {
+        "S1": "Sam only gave ELLEN apples.",
+        "S2": "Sam also gave Rob apples.",
+        "A": "C",
+        "focus": 1,
+        "logic": "POS",
+        "alternative": "1",
+        "source": "original",
+        "original_file": "f5",
+        "original_index": 1
+    },
+    {
+        "S1": "Sam only gave Tom BANANAS.",
+        "S2": "Sam didn't give Tom oranges.",
+        "A": "A",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "2",
+        "source": "original",
+        "original_file": "f5",
+        "original_index": 9
+    },
+    {
+        "S1": "Sam only gave SUE apples.",
+        "S2": "Sam didn't give Sue oranges.",
+        "A": "B",
+        "focus": 1,
+        "logic": "NEG",
+        "alternative": "2",
+        "source": "original",
+        "original_file": "f2",
+        "original_index": 5
+    },
+    {
+        "S1": "Sam only gave Bill APPLES.",
+        "S2": "Sam didn't give Mary apples.",
+        "A": "B",
+        "focus": 2,
+        "logic": "NEG",
+        "alternative": "1",
+        "source": "original",
+        "original_file": "f4",
+        "original_index": 1
+    }
+]
